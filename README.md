@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Reporte U-Vibe Power BI</title>
+<title>Reporte U-Vibe · Power BI</title>
 <style>
 :root{color-scheme:dark;--bg:#0A0F4A;--pn:#111a73;--pn2:#1A237E;--ln:#2d38ad;--tx:#fff;--mu:#a9b1ee;--lm:#B5F20D;--rd:#ff5d5d;--am:#ffc24d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 :root[data-theme="light"]{color-scheme:dark}
@@ -61,7 +61,7 @@ table{width:100%;border-collapse:collapse;font-size:.8rem}th{text-align:left;col
 <div class="pg" id="p2"><div class="g r3"><div class="v"><h3>Programas y sedes filtrados</h3><div id="pr"></div></div><div class="v"><h3>Duración</h3><div id="du"></div><h3 style="margin-top:12px">Día</h3><div id="dd"></div></div><div class="v"><h3>Top 10 búsquedas escritas</h3><div id="tp"></div><p style="font-size:.7rem;color:var(--mu)">78% usó filtros (5,181) · 22% escribió (1,465)</p></div></div></div>
 
 <div class="pg" id="p3"><div class="v"><h3>Plan de acción para la próxima edición</h3><table id="ac"></table></div>
-<div class="v" style="margin-top:12px"><h3>Correcciones a la presentación actual</h3><table id="pp"></table></div></div>
+</div>
 
 <div class="pg" id="p4"><div class="web"><h3 style="margin:0 0 4px">Sitio web: ficha por curso</h3><p style="margin:0 0 8px;font-size:.8rem;color:#cdd2ff">Prototipo con descripción y datos clave. Los cursos llenos bajan al final. Descripciones y cupos son ejemplos ilustrativos, no datos reales.</p><div id="wf" class="sl"></div><div class="cg" id="cg"></div></div></div>
 
@@ -106,8 +106,6 @@ const AC=[["A","92.2% del uso en 4 días","Campaña de expectativa, cuenta regre
 ["Bb","Consulta de horas acumuladas","Atajo directo en el chat y el portal","Menos preguntas de Horas"]];
 const L={A:"Alta",Mm:"Media",Bb:"Baja"};
 $("ac").innerHTML=`<tr><th>Prioridad</th><th>Hallazgo</th><th>Acción</th><th>Meta</th></tr>`+AC.map(a=>`<tr><td><span class="tg ${a[0]}">${L[a[0]]}</span></td><td>${a[1]}</td><td>${a[2]}</td><td>${a[3]}</td></tr>`).join("");
-const P=[["Texto","‘púsquedas’ en la gráfica de eventos y título ‘Qué filtran los usuarios’ repetido en dos láminas."],["Datos","El gráfico por hora no coincide con el Excel: repite ‘15 h’ y varios valores difieren (18 h: 882 vs 540 en el Excel)."],["Formato","Conviven ‘92%’ y ‘92.2%’; usar un solo formato."],["Conclusión 03","Mezcla Express-Arte con Usulután; separarlos."],["Contexto","Falta meta o edición anterior para comparar."],["Contenido","Añadir lámina de acciones recomendadas y de cursos."],["Diseño","Gráficos más grandes y menos texto pequeño."],["Datos","Explicar días sin datos (14 y 17 oct) y el 13 previo al lanzamiento."]];
-$("pp").innerHTML=P.map(p=>`<tr><td style="width:120px"><b>${p[0]}</b></td><td>${p[1]}</td></tr>`).join("");
 const W=[["Primeros auxilios","Actuar en emergencias.","Bien al 100","8 h","Lunes","San Miguel","8:00 a 4:00",30,30],["Derecho en la vida diaria","Tus derechos explicados fácil.","Vínculos con el Mundo","4 h","Martes","Usulután","8:00 a 12:00",40,22],["Apicultor por un día","El mundo de las abejas.","Bien al 100","8 h","Miércoles","Usulután","8:00 a 4:00",25,25],["Baile urbano","Ritmo y coreografía.","Express-Arte","4 h","Jueves","San Miguel","2:00 a 6:00",35,35],["Hablar en público","Pierde el miedo al micrófono.","ImpulsaTech","16 h","Lunes","Usulután","2 sesiones",30,18],["Pintura creativa","Colores y técnicas.","Express-Arte","8 h","Viernes","San Miguel","8:00 a 4:00",20,9],["Gestión de proyectos","Organiza, planifica y controla.","ImpulsaTech","16 h","Martes","San Miguel","2 sesiones",40,40],["Birdwatching","Reconoce aves locales.","Bien al 100","4 h","Miércoles","Usulután","6:00 a 10:00",20,7]];
 let wf="Todas";const wo=["Todas","San Miguel","Usulután","4 h","8 h","16 h"];
 $("wf").innerHTML=wo.map((o,i)=>`<button class="ch ${i?"":"on"}" data-f="${o}">${o}</button>`).join("");
@@ -120,4 +118,3 @@ const UT=["¡Hola! Soy <b>U-vi</b>, el asistente de Semana U-Vibe. Respondí <b>
 function un(){$("ub").innerHTML=UT[ui%UT.length];ui++}un();$("un").onclick=un;$("ui").onclick=un;
 rd();ct();cg();
 </script></body></html>
-
