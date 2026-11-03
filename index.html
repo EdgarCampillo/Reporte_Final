@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>U-Vibe · Reporte Power BI</title>
+<title>U-Vibe Reporte Power BI</title>
 <style>
 :root{color-scheme:dark;--bg:#0A0F4A;--pn:#111a73;--pn2:#1A237E;--ln:#2d38ad;--tx:#fff;--mu:#a9b1ee;--lm:#B5F20D;--rd:#ff5d5d;--am:#ffc24d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 :root[data-theme="light"]{color-scheme:dark}
